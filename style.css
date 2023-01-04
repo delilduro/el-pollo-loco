@@ -1,0 +1,420 @@
+@font-face {
+    font-family: 'Zabras';
+    src: url('fonts/Zabars.ttf') format('truetype');
+}  
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('img/desert.png') ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Zabras', Arial, Helvetica, sans-serif;
+}
+
+#startPage {
+    margin: 0;
+}
+
+#startScreen {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+#canvas {
+  display: block;
+}
+
+#winner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#winnerImg {
+    object-fit: cover;
+    width: 480px;
+    height: 240px;
+    background-color: #f0ba6a;
+}
+
+#gameOver{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameOverImg {
+    width: 720px;
+    height: 480px;
+}
+
+.description {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    bottom: 12px;
+    left: 100px;
+    color: #9A3A17;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    background-color: #FFD013;
+    border: 7px solid #9A3A17;
+    border-top: 2px solid #9A3A17;
+    border-left: 2px solid #9A3A17;
+    padding: 3px;
+    box-shadow: 3px 3px 3px white;
+}
+
+#startBtn {
+    cursor: pointer;
+    background-color: #FFD013;
+    border: 7px solid #9A3A17;
+    border-top: 2px solid #9A3A17;
+    border-left: 2px solid #9A3A17;
+    padding: 3px;
+    box-shadow: 3px 3px 3px white;
+    font-size: 45px;
+    color: #9A3A17;
+}
+
+.restartBtn{
+    text-decoration: none;
+    font-size: 40px;
+    padding: 3px;
+    margin: 32px;
+    color: #9A3A17;
+    background-color: yellow;
+    border-top: 2px solid #9A3A17;
+    border-left: 2px solid #9A3A17;
+    border-right: 7px solid #9A3A17;
+    border-bottom: 7px solid #9A3A17;
+    box-shadow: 3px 3px 3px white;
+    cursor: pointer;
+}
+
+#newGame {
+    position: absolute;
+    top: 16px;
+    left: 100px;
+    background-color: #F7BD63;
+    border: unset;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    font-size: 25px;
+    color: #994409;
+}
+
+.fullscreenBtns{
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#enterfullscreen{
+    display: flex;
+    justify-content: flex-end;
+}
+
+h1 {
+    text-align: center;
+    font-size: 64px;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.d-none {
+    display: none !important;
+}
+
+#mobileButton {
+    margin-top: -60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;   
+}
+
+.touchBtn {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width : 720px) {
+    #canvas {
+        width: 100%;
+    }
+
+    #winner {
+        margin: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #gameOverImg{
+        width: 100%;
+    }
+
+    #game {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #headline {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width : 800px) {
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #game {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #winner {
+        margin: 0;
+    }
+
+    #instructions {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 689px) {
+    #mobileButton {
+        margin-top: -40px;
+    }
+
+    .touchBtn {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    canvas {
+        width: 100%;
+    }
+
+    #winner {
+        margin: 0;
+    }
+
+    #instructions {
+        display: none;
+    }
+}
+
+@media only screen and (max-height : 600px) {
+    #winner {
+        margin: 0;
+    }
+
+    #headline {
+        display: none;
+    }
+
+    body {
+        margin: 0;
+        background-image: none;
+        background-size: none;
+    }
+}
+
+@media only screen and (max-height : 528px) {
+    #enterfullscreen {
+        display: none;
+    }
+}
+
+@media only screen and (max-height : 500px) {
+    #gameOverBtn {
+        margin: 0;
+    }
+
+    #winnerBtn {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-height : 260px) {
+    #mobileButton {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-height : 470px) {
+    body {
+        height: 100%;
+    }
+
+    canvas {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #game {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-height : 480px) {
+    #instructions {
+        display: none;
+    }
+
+    .start {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #winner {
+        margin: 0;
+    }
+
+    #headline {
+        display: none !important;
+    }
+
+    body {
+        background-size: none;
+    }
+
+    #mobileButton {
+        margin-top: -50px;
+    }
+
+    .touchBtn {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 240px;
+    }
+
+    #enterfullscreen{
+        display: none !important;
+    }
+
+    #gameOverImg {
+        width: 480px !important;
+        height: 240px !important;
+    }
+
+    #winner {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width : 450px) {
+    #rotateDevice {
+        display: block !important;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+    }
+
+    #enterfullscreen{
+        display: none;
+    }
+
+    body {
+        background-image: none;
+        background-size: unset;
+    }
+
+    #canvas {
+        display: none;
+    }
+
+    #winner {
+        display: none;
+    }
+
+    #gameOver {
+        display: none;
+    }
+
+    #rotateImg {
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.7;
+        display: block;
+    }
+
+    #rotateTxt {
+        color: #9A3A17;
+        position: absolute;
+        top: 150px;
+        left: 100px;
+        font-size: 35px;
+        font-weight: lighter;
+    }
+
+    #startScreen {
+        display: none;
+    }
+
+    #instructions {
+        display: none !important;
+        width: 0;
+    }
+
+    .description {
+        display: none !important;
+        width: 0;
+        height: 0;
+        margin: 0;
+    }
+
+    #mobileButton {
+        display: none !important;
+    }
+}
